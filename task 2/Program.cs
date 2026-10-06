@@ -44,26 +44,33 @@
                         bool found2 = false;
 
                         Console.WriteLine("Enter a number to add:");
+                        
 
                         newNumber = Convert.ToInt32(Console.ReadLine());
+                            //Console.WriteLine($" {newNumber} Added");
 
-                        numbers.Add(newNumber);
-                       for (int i = 0; i < numbers.Count; i++)
+                        for (int i = 0; i < numbers.Count; i++)
                         {
                             if (numbers[i] == newNumber)
                             {
-                               
                                 found2 = true;
+
                             }
                         }
                         if (!found2)
                         {
+                            numbers.Add(newNumber);
                             Console.WriteLine($" {newNumber} Added");
                         }
                         else
                         {
+
                             Console.WriteLine($" {newNumber} is already in the list");
+
                         }
+
+
+
                         break;
                     case 'C':
                         numbers.Clear();
